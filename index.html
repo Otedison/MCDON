@@ -1,0 +1,1768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MC Don | Professional Corporate MC & Event Host</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #8B4513; /* Rich brown */
+            --secondary: #D4AF37; /* Gold */
+            --accent: #5D4037; /* Dark brown */
+            --light: #F5F5F5;
+            --dark: #212121;
+            --gradient: linear-gradient(135deg, #8B4513 0%, #A0522D 50%, #D2691E 100%);
+            --gradient-light: linear-gradient(135deg, #F5F5F5 0%, #FAF3E0 100%);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--gradient-light);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background: rgba(139, 69, 19, 0.95);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+        }
+        
+        .logo span {
+            color: var(--secondary);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            transition: var(--transition);
+            padding: 8px 15px;
+            border-radius: 4px;
+        }
+        
+        nav ul li a:hover {
+            color: var(--secondary);
+            background: rgba(212, 175, 55, 0.1);
+        }
+        
+        .nav-btn {
+            background: var(--secondary);
+            color: var(--dark) !important;
+            padding: 10px 25px !important;
+            border-radius: 30px;
+            font-weight: 700;
+        }
+        
+        .nav-btn:hover {
+            background: #E6B800;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: white;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: var(--gradient), url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+            color: white;
+            padding: 200px 0 120px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+            position: relative;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: var(--dark);
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .btn:hover {
+            background-color: #e0b420;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 3px;
+            background-color: var(--secondary);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section-title p {
+            color: var(--accent);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* What I Offer Section */
+        .services-offer {
+            background-color: white;
+            padding: 80px 0;
+            border-radius: 10px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.08);
+            margin: 40px 0;
+        }
+        
+        .services-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+        
+        .services-intro h2 {
+            font-size: 2.8rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .services-intro p {
+            font-size: 1.2rem;
+            color: var(--accent);
+            line-height: 1.8;
+        }
+        
+        .services-grid-offer {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card-offer {
+            background: white;
+            border-radius: 10px;
+            padding: 35px 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+            border: 1px solid rgba(139, 69, 19, 0.1);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card-offer:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            border-color: var(--secondary);
+        }
+        
+        .service-card-offer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient);
+            transform: scaleX(0);
+            transition: var(--transition);
+        }
+        
+        .service-card-offer:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .service-icon-offer {
+            background: rgba(212, 175, 55, 0.1);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            transition: var(--transition);
+        }
+        
+        .service-card-offer:hover .service-icon-offer {
+            background: rgba(212, 175, 55, 0.2);
+            transform: scale(1.1);
+        }
+        
+        .service-icon-offer i {
+            font-size: 2rem;
+            color: var(--primary);
+        }
+        
+        .service-card-offer h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .service-card-offer p {
+            color: var(--accent);
+            line-height: 1.6;
+        }
+        
+        /* E-commerce Product Carousel */
+        .merchandise {
+            background-color: white;
+            padding: 80px 0;
+            border-radius: 10px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.08);
+            margin: 40px 0;
+        }
+        
+        .product-carousel {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        .product-slide {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            gap: 30px;
+            padding: 20px 0;
+        }
+        
+        .product-item {
+            min-width: calc(33.333% - 20px);
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+            border: 1px solid rgba(139, 69, 19, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .product-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            border-color: var(--secondary);
+        }
+        
+        .product-img-container {
+            position: relative;
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .product-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .product-item:hover .product-img {
+            transform: scale(1.05);
+        }
+        
+        .product-tag {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--secondary);
+            color: var(--dark);
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            z-index: 2;
+        }
+        
+        .product-info {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .product-info h3 {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .product-description {
+            color: var(--accent);
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+        
+        .product-price {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        
+        .price {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--secondary);
+        }
+        
+        .price::before {
+            content: 'KES ';
+            font-size: 1.2rem;
+        }
+        
+        .original-price {
+            font-size: 1.2rem;
+            color: #999;
+            text-decoration: line-through;
+            margin-left: 10px;
+        }
+        
+        .original-price::before {
+            content: 'KES ';
+        }
+        
+        .product-rating {
+            color: #FFD700;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        
+        .product-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: auto;
+        }
+        
+        .buy-btn {
+            flex: 1;
+            background: var(--gradient);
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-decoration: none;
+            text-align: center;
+        }
+        
+        .buy-btn:hover {
+            background: linear-gradient(135deg, #A0522D 0%, #D2691E 100%);
+            transform: translateY(-2px);
+        }
+        
+        .view-btn {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .view-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            color: var(--primary);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: var(--transition);
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(139, 69, 19, 0.1);
+        }
+        
+        .carousel-btn:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        .prev-btn {
+            left: 0;
+        }
+        
+        .next-btn {
+            right: 0;
+        }
+        
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            gap: 10px;
+        }
+        
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #ddd;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+        
+        .indicator.active {
+            background-color: var(--primary);
+            transform: scale(1.2);
+            border-color: var(--secondary);
+        }
+        
+        /* Gallery Section */
+        .gallery {
+            background-color: #f8f9fa;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            height: 250px;
+            position: relative;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+            color: white;
+            padding: 20px;
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+        
+        /* Companies Section */
+        .companies-section {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .companies-section .section-title h2 {
+            color: white;
+        }
+        
+        .companies-section .section-title p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .companies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 30px;
+            align-items: center;
+            justify-items: center;
+        }
+        
+        .company-logo {
+            background-color: rgba(255, 255, 255, 0.1);
+            width: 180px;
+            height: 100px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            transition: var(--transition);
+        }
+        
+        .company-logo:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+        
+        .company-logo img {
+            max-width: 100%;
+            max-height: 60px;
+            filter: brightness(0) invert(1);
+        }
+        
+        .company-name {
+            margin-top: 10px;
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        /* Booked Events & Ad Carousel - 3/4 + 1/4 Layout */
+        .booked-events-section {
+            background-color: #f8f9fa;
+        }
+        
+        .split-layout {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .events-container {
+            flex: 3;
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .ad-carousel-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .events-list {
+            max-height: 400px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+        
+        .event-item {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+            transition: var(--transition);
+        }
+        
+        .event-item:hover {
+            background-color: rgba(212, 175, 55, 0.1);
+            border-radius: 5px;
+        }
+        
+        .event-item:last-child {
+            border-bottom: none;
+        }
+        
+        .event-date {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: var(--dark);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        
+        .event-title {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .event-location {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+        
+        /* Vertical Ad Carousel */
+        .vertical-carousel {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+        }
+        
+        .vertical-slide {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .ad-item {
+            min-height: 100%;
+            padding: 20px;
+            background-color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .ad-item h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .ad-item p {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        
+        .vertical-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .vertical-indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #ddd;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .vertical-indicator.active {
+            background-color: var(--primary);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background-color: white;
+        }
+        
+        .testimonials-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .testimonial {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            margin: 0 20px;
+        }
+        
+        .testimonial img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            border: 3px solid var(--secondary);
+        }
+        
+        .testimonial p {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: var(--gray);
+        }
+        
+        .testimonial h4 {
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .testimonial span {
+            color: var(--secondary);
+            font-size: 0.9rem;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #0d1c36;
+            color: rgba(255, 255, 255, 0.7);
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .footer-column h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+        }
+        
+        .creator-credit {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .product-item {
+                min-width: calc(50% - 15px);
+            }
+            
+            .split-layout {
+                flex-direction: column;
+            }
+            
+            .events-container, .ad-carousel-container {
+                width: 100%;
+            }
+            
+            .vertical-carousel {
+                height: 300px;
+            }
+            
+            .services-grid-offer {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                background: rgba(139, 69, 19, 0.98);
+                backdrop-filter: blur(10px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+                transition: var(--transition);
+                z-index: 999;
+                padding: 20px 0;
+            }
+            
+            nav.active {
+                left: 0;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                padding: 0 20px;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+                width: 100%;
+            }
+            
+            nav ul li a {
+                display: block;
+                padding: 12px 20px;
+                text-align: center;
+            }
+            
+            .hero {
+                padding: 150px 0 80px;
+            }
+            
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .services-intro h2 {
+                font-size: 2.2rem;
+            }
+            
+            .product-item {
+                min-width: 100%;
+            }
+            
+            .product-carousel {
+                padding: 0 20px;
+            }
+            
+            .carousel-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+            
+            .services-intro h2 {
+                font-size: 1.8rem;
+            }
+            
+            .services-intro p {
+                font-size: 1rem;
+            }
+            
+            .product-carousel {
+                padding: 0 10px;
+            }
+            
+            .product-item {
+                padding: 20px;
+            }
+            
+            .product-img-container {
+                height: 200px;
+            }
+            
+            .companies-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            
+            .service-card-offer {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">MC <span>Don</span></div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services-offer">Services</a></li>
+                    <li><a href="#merchandise">Merchandise</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#companies">Companies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                   <li><a href="contact.html" class="nav-btn">Book Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>MC Don</h1>
+            <p>Professional Corporate MC & Event Host with over 15 years of experience engaging audiences at international conferences, corporate galas, and high-profile business events.</p>
+            <a href="#contact" class="btn">Book Your Event Now</a>
+        </div>
+    </section>
+
+    <!-- What I Offer Section -->
+    <section id="services-offer" class="services-offer">
+        <div class="container">
+            <div class="services-intro">
+                <h2>What I Offer</h2>
+                <p>Explore Exceptional Event Services<br>
+                I offer a range of professional services tailored to make your events and campaigns nothing short of spectacular.</p>
+            </div>
+            
+            <div class="services-grid-offer">
+                <div class="service-card-offer">
+                    <div class="service-icon-offer">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3>MC & Event Hosting</h3>
+                    <p>Corporate events, team building, birthdays, and more. Engaging audiences with professionalism and charisma.</p>
+                </div>
+                
+                <div class="service-card-offer">
+                    <div class="service-icon-offer">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Content Creation</h3>
+                    <p>Engaging social media campaigns, advertising, and creative direction that captures attention and delivers results.</p>
+                </div>
+                
+                <div class="service-card-offer">
+                    <div class="service-icon-offer">
+                        <i class="fas fa-theater-masks"></i>
+                    </div>
+                    <h3>Acting</h3>
+                    <p>Theatre, TV, and film appearances that captivate audiences with compelling performances and emotional depth.</p>
+                </div>
+                
+                <div class="service-card-offer">
+                    <div class="service-icon-offer">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Brand Collaborations</h3>
+                    <p>Engaging partnerships for impactful marketing that elevates brands and connects with target audiences.</p>
+                </div>
+                
+                <div class="service-card-offer">
+                    <div class="service-icon-offer">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Creative Direction</h3>
+                    <p>Transformative event planning & execution that tells your story through innovative concepts and flawless execution.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- E-commerce Product Carousel -->
+    <section id="merchandise" class="merchandise">
+        <div class="container">
+            <div class="section-title">
+                <h2>Official Merchandise</h2>
+                <p>Show your support with exclusive MC Don branded merchandise</p>
+            </div>
+            
+            <div class="product-carousel">
+                <div class="product-slide" id="productSlide">
+                    <!-- Product 1: Ankara -->
+                    <div class="product-item">
+                        <div class="product-img-container">
+                            <div class="product-tag">Best Seller</div>
+                            <img src="https://images.unsplash.com/photo-1558769132-cb1c458e4222?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="MC Don Ankara" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <h3>MC Don Signature Ankara</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span style="color: #666; margin-left: 5px;">(42 reviews)</span>
+                            </div>
+                            <p class="product-description">Premium African print Ankara fabric featuring the MC Don logo and signature patterns. Perfect for corporate events with cultural themes.</p>
+                            <div class="product-price">
+                                <div>
+                                    <span class="price">12,999</span>
+                                    <span class="original-price">15,999</span>
+                                </div>
+                                <div style="font-size: 0.9rem; color: #27ae60;">
+                                    <i class="fas fa-check-circle"></i> In Stock
+                                </div>
+                            </div>
+                            <div class="product-actions">
+                                <a href="https://donproductions.hustlesasa.shop/" target="_blank" class="buy-btn">
+                                    <i class="fas fa-shopping-cart"></i> Buy Now
+                                </a>
+                                <button class="view-btn">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 2: Hoodie -->
+                    <div class="product-item">
+                        <div class="product-img-container">
+                            <div class="product-tag">New Arrival</div>
+                            <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="MC Don Hoodie" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <h3>Premium MC Don Hoodie</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span style="color: #666; margin-left: 5px;">(28 reviews)</span>
+                            </div>
+                            <p class="product-description">Comfortable and stylish hoodie with embroidered MC Don logo. Perfect for casual Fridays or client giveaways.</p>
+                            <div class="product-price">
+                                <div>
+                                    <span class="price">8,499</span>
+                                </div>
+                                <div style="font-size: 0.9rem; color: #e74c3c;">
+                                    <i class="fas fa-fire"></i> Limited Stock
+                                </div>
+                            </div>
+                            <div class="product-actions">
+                                <a href="https://donproductions.hustlesasa.shop/" target="_blank" class="buy-btn">
+                                    <i class="fas fa-shopping-cart"></i> Buy Now
+                                </a>
+                                <button class="view-btn">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 3: T-Shirt -->
+                    <div class="product-item">
+                        <div class="product-img-container">
+                            <div class="product-tag">Most Popular</div>
+                            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="MC Don T-Shirt" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <h3>Classic MC Don T-Shirt</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span style="color: #666; margin-left: 5px;">(67 reviews)</span>
+                            </div>
+                            <p class="product-description">100% cotton t-shirt with the distinctive MC Don logo. Perfect for team uniforms or event staff.</p>
+                            <div class="product-price">
+                                <div>
+                                    <span class="price">3,999</span>
+                                    <span class="original-price">4,999</span>
+                                </div>
+                                <div style="font-size: 0.9rem; color: #27ae60;">
+                                    <i class="fas fa-check-circle"></i> In Stock
+                                </div>
+                            </div>
+                            <div class="product-actions">
+                                <a href="https://donproductions.hustlesasa.shop/" target="_blank" class="buy-btn">
+                                    <i class="fas fa-shopping-cart"></i> Buy Now
+                                </a>
+                                <button class="view-btn">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 4: Cap -->
+                    <div class="product-item">
+                        <div class="product-img-container">
+                            <img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="MC Don Cap" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <h3>MC Don Premium Cap</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span style="color: #666; margin-left: 5px;">(19 reviews)</span>
+                            </div>
+                            <p class="product-description">Adjustable premium cap with embroidered MC Don logo. Perfect for outdoor events and sunny days.</p>
+                            <div class="product-price">
+                                <div>
+                                    <span class="price">2,499</span>
+                                </div>
+                                <div style="font-size: 0.9rem; color: #27ae60;">
+                                    <i class="fas fa-check-circle"></i> In Stock
+                                </div>
+                            </div>
+                            <div class="product-actions">
+                                <a href="https://donproductions.hustlesasa.shop/" target="_blank" class="buy-btn">
+                                    <i class="fas fa-shopping-cart"></i> Buy Now
+                                </a>
+                                <button class="view-btn">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 5: Mug -->
+                    <div class="product-item">
+                        <div class="product-img-container">
+                            <div class="product-tag">Sale</div>
+                            <img src="https://images.unsplash.com/photo-1514228742587-6b1558fcf93a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="MC Don Mug" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <h3>MC Don Ceramic Mug</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span style="color: #666; margin-left: 5px;">(31 reviews)</span>
+                            </div>
+                            <p class="product-description">Premium ceramic mug with MC Don logo. Perfect for your morning coffee or as a gift to clients.</p>
+                            <div class="product-price">
+                                <div>
+                                    <span class="price">1,899</span>
+                                    <span class="original-price">2,499</span>
+                                </div>
+                                <div style="font-size: 0.9rem; color: #27ae60;">
+                                    <i class="fas fa-check-circle"></i> In Stock
+                                </div>
+                            </div>
+                            <div class="product-actions">
+                                <a href="https://donproductions.hustlesasa.shop/" target="_blank" class="buy-btn">
+                                    <i class="fas fa-shopping-cart"></i> Buy Now
+                                </a>
+                                <button class="view-btn">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn prev-btn" id="prevBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-btn next-btn" id="nextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <div class="carousel-indicators" id="carouselIndicators">
+                    <div class="indicator active" data-slide="0"></div>
+                    <div class="indicator" data-slide="1"></div>
+                    <div class="indicator" data-slide="2"></div>
+                    <div class="indicator" data-slide="3"></div>
+                    <div class="indicator" data-slide="4"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Event Gallery</h2>
+                <p>A visual journey through some of my recent corporate events</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Corporate Conference">
+                    <div class="gallery-overlay">
+                        <h4>Global Tech Conference 2023</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Award Ceremony">
+                    <div class="gallery-overlay">
+                        <h4>Industry Awards Gala</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1492684223066-e9e4aab4d25e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Product Launch">
+                    <div class="gallery-overlay">
+                        <h4>New Product Launch Event</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Corporate Meeting">
+                    <div class="gallery-overlay">
+                        <h4>Corporate Strategy Summit</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Team Building">
+                    <div class="gallery-overlay">
+                        <h4>Executive Team Building</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Corporate Dinner">
+                    <div class="gallery-overlay">
+                        <h4>Corporate Anniversary Dinner</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Companies Section -->
+    <section id="companies" class="companies-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Companies I've Worked With</h2>
+                <p>Trusted by leading corporations for their most important events</p>
+            </div>
+            <div class="companies-grid">
+                <div class="company-item">
+                    <div class="company-logo">
+                        <i class="fas fa-building" style="font-size: 2.5rem;"></i>
+                    </div>
+                    <div class="company-name">TechGlobal Inc.</div>
+                </div>
+                <div class="company-item">
+                    <div class="company-logo">
+                        <i class="fas fa-chart-line" style="font-size: 2.5rem;"></i>
+                    </div>
+                    <div class="company-name">Financial Solutions Group</div>
+                </div>
+                <div class="company-item">
+                    <div class="company-logo">
+                        <i class="fas fa-heartbeat" style="font-size: 2.5rem;"></i>
+                    </div>
+                    <div class="company-name">HealthFirst Pharmaceuticals</div>
+                </div>
+                <div class="company-item">
+                    <div class="company-logo">
+                        <i class="fas fa-shopping-bag" style="font-size: 2.5rem;"></i>
+                    </div>
+                    <div class="company-name">Retail Innovations Co.</div>
+                </div>
+                <div class="company-item">
+                    <div class="company-logo">
+                        <i class="fas fa-car" style="font-size: 2.5rem;"></i>
+                    </div>
+                    <div class="company-name">AutoTech Motors</div>
+                </div>
+                <div class="company-item">
+                    <div class="company-logo">
+                        <i class="fas fa-graduation-cap" style="font-size: 2.5rem;"></i>
+                    </div>
+                    <div class="company-name">Global Education Partners</div>
+                </div>
+                <div class="company-item">
+                    <div class="company-logo">
+                        <i class="fas fa-utensils" style="font-size: 2.5rem;"></i>
+                    </div>
+                    <div class="company-name">Gourmet Food Industries</div>
+                </div>
+                <div class="company-item">
+                    <div class="company-logo">
+                        <i class="fas fa-plane" style="font-size: 2.5rem;"></i>
+                    </div>
+                    <div class="company-name">Skyline Travel Group</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booked Events & Ad Carousel Section -->
+    <section id="booked-events" class="booked-events-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Upcoming Booked Events</h2>
+                <p>Check out my upcoming schedule and featured promotions</p>
+            </div>
+            
+            <!-- 3/4 + 1/4 Split Layout -->
+            <div class="split-layout">
+                <!-- Events List (3/4 width) -->
+                <div class="events-container">
+                    <h3 style="color: var(--primary); margin-bottom: 20px;">Upcoming Events Schedule</h3>
+                    <div class="events-list">
+                        <div class="event-item">
+                            <div class="event-date">October 15, 2023</div>
+                            <div class="event-title">TechGlobal Annual Conference</div>
+                            <div class="event-location">San Francisco, CA | 800+ attendees</div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-date">October 28, 2023</div>
+                            <div class="event-title">Financial Solutions Group Gala</div>
+                            <div class="event-location">New York, NY | Awards Ceremony</div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-date">November 5, 2023</div>
+                            <div class="event-title">HealthFirst Product Launch</div>
+                            <div class="event-location">Chicago, IL | New Medical Device</div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-date">November 18, 2023</div>
+                            <div class="event-title">Retail Innovations Summit</div>
+                            <div class="event-location">Las Vegas, NV | Industry Leaders</div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-date">December 3, 2023</div>
+                            <div class="event-title">AutoTech Annual Meeting</div>
+                            <div class="event-location">Detroit, MI | Shareholder Event</div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-date">December 15, 2023</div>
+                            <div class="event-title">Global Education Symposium</div>
+                            <div class="event-location">Boston, MA | International Delegates</div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-date">January 10, 2024</div>
+                            <div class="event-title">Gourmet Food Expo</div>
+                            <div class="event-location">New Orleans, LA | Culinary Showcase</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Ad Carousel (1/4 width) -->
+                <div class="ad-carousel-container">
+                    <div class="vertical-carousel" id="verticalCarousel">
+                        <div class="vertical-slide" id="verticalSlide">
+                            <!-- Ad 1 -->
+                            <div class="ad-item">
+                                <h3>Limited Time Offer!</h3>
+                                <p>Book your Q1 2024 event before November 30th and get 15% off!</p>
+                                <a href="#contact" class="btn" style="padding: 8px 15px; font-size: 0.9rem;">Book Now</a>
+                            </div>
+                            <!-- Ad 2 -->
+                            <div class="ad-item">
+                                <h3>Merchandise Launch</h3>
+                                <p>New MC Don merchandise now available for pre-order. Limited stock!</p>
+                                <a href="#merchandise" class="btn" style="padding: 8px 15px; font-size: 0.9rem;">Shop Now</a>
+                            </div>
+                            <!-- Ad 3 -->
+                            <div class="ad-item">
+                                <h3>Virtual Events</h3>
+                                <p>Now offering professional virtual event hosting. Perfect for hybrid teams.</p>
+                                <a href="#services-offer" class="btn" style="padding: 8px 15px; font-size: 0.9rem;">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vertical-indicators" id="verticalIndicators">
+                        <div class="vertical-indicator active" data-slide="0"></div>
+                        <div class="vertical-indicator" data-slide="1"></div>
+                        <div class="vertical-indicator" data-slide="2"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CTA Button -->
+            <div style="text-align: center;">
+                <a href="#contact" class="btn">Book Your Event Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="cta-section">
+        <div class="container">
+            <h2>Ready to Elevate Your Next Event?</h2>
+            <p>Contact MC Don today to discuss your corporate event needs and secure your date. Let's create an unforgettable experience for your attendees.</p>
+            <a href="mailto:contact@mcdoncorporate.com" class="btn" style="background-color: white; color: var(--primary);">Contact MC Don Now</a>
+        </div>
+    </section>
+
+    <!-- Testimonials Section (Now before footer) -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Client Testimonials</h2>
+                <p>What corporate clients say about working with MC Don</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client Testimonial">
+                    <p>"MC Don hosted our annual global sales conference for 800+ attendees. His professionalism, adaptability, and ability to keep the energy high throughout the 3-day event was exceptional. We've already booked him for next year."</p>
+                    <h4>Michael Chen</h4>
+                    <span>VP of Marketing, TechGlobal Inc.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>MC Don</h3>
+                    <p>Professional Corporate MC & Event Host with expertise in business conferences, award ceremonies, and corporate entertainment.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services-offer">Services</a></li>
+                        <li><a href="#merchandise">Merchandise</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#companies">Companies</a></li>
+                        <li><a href="#booked-events">Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Information</h3>
+                    <ul class="footer-links">
+                        <li><a href="mailto:mcdonkenya@gmail.com">mcdonkenya@gmail.com</a></li>
+                        <li><a href="tel:+25427588661">+25427588661</a></li>
+                        <li><a href="#">Ngumba Estate, Off Garden City</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="creator-credit">
+                <p>McDon kenya. Built with <span class="heart">❤️</span> by Edison Otieno</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = mainNav.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                mainNav.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // E-commerce Product Carousel
+        const productSlide = document.getElementById('productSlide');
+        const carouselIndicators = document.getElementById('carouselIndicators');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const indicators = document.querySelectorAll('.indicator');
+        
+        let currentSlide = 0;
+        const totalSlides = 5;
+        const itemsPerSlide = window.innerWidth < 768 ? 1 : window.innerWidth < 992 ? 2 : 3;
+        const totalVisibleSlides = Math.ceil(totalSlides / itemsPerSlide);
+        
+        function updateCarousel() {
+            const slideWidth = 100 / itemsPerSlide;
+            productSlide.style.transform = `translateX(-${currentSlide * slideWidth}%)`;
+            
+            // Update indicators
+            indicators.forEach((indicator, index) => {
+                if(index === currentSlide) {
+                    indicator.classList.add('active');
+                } else {
+                    indicator.classList.remove('active');
+                }
+            });
+        }
+        
+        // Next button event
+        nextBtn.addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % totalVisibleSlides;
+            updateCarousel();
+        });
+        
+        // Previous button event
+        prevBtn.addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + totalVisibleSlides) % totalVisibleSlides;
+            updateCarousel();
+        });
+        
+        // Indicator click events
+        indicators.forEach(indicator => {
+            indicator.addEventListener('click', () => {
+                currentSlide = parseInt(indicator.getAttribute('data-slide'));
+                updateCarousel();
+            });
+        });
+        
+        // Auto-rotate carousel every 5 seconds
+        let carouselInterval = setInterval(() => {
+            currentSlide = (currentSlide + 1) % totalVisibleSlides;
+            updateCarousel();
+        }, 5000);
+        
+        // Pause carousel on hover
+        productSlide.addEventListener('mouseenter', () => {
+            clearInterval(carouselInterval);
+        });
+        
+        productSlide.addEventListener('mouseleave', () => {
+            carouselInterval = setInterval(() => {
+                currentSlide = (currentSlide + 1) % totalVisibleSlides;
+                updateCarousel();
+            }, 5000);
+        });
+        
+        // Vertical Ad Carousel
+        const verticalCarousel = document.getElementById('verticalCarousel');
+        const verticalSlide = document.getElementById('verticalSlide');
+        const verticalIndicators = document.getElementById('verticalIndicators');
+        const verticalIndicatorDots = document.querySelectorAll('.vertical-indicator');
+        
+        let currentVerticalSlide = 0;
+        const totalVerticalSlides = 3;
+        
+        function updateVerticalCarousel() {
+            verticalSlide.style.transform = `translateY(-${currentVerticalSlide * 100}%)`;
+            
+            // Update indicators
+            verticalIndicatorDots.forEach((indicator, index) => {
+                if(index === currentVerticalSlide) {
+                    indicator.classList.add('active');
+                } else {
+                    indicator.classList.remove('active');
+                }
+            });
+        }
+        
+        // Auto-rotate vertical carousel every 4 seconds
+        setInterval(() => {
+            currentVerticalSlide = (currentVerticalSlide + 1) % totalVerticalSlides;
+            updateVerticalCarousel();
+        }, 4000);
+        
+        // Vertical indicator click events
+        verticalIndicatorDots.forEach(indicator => {
+            indicator.addEventListener('click', () => {
+                currentVerticalSlide = parseInt(indicator.getAttribute('data-slide'));
+                updateVerticalCarousel();
+            });
+        });
+        
+        // Buy Now button functionality
+        document.querySelectorAll('.buy-btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                // The link will redirect to the external shop
+                // We'll let the default link behavior handle it
+            });
+        });
+        
+        // View button functionality
+        document.querySelectorAll('.view-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const productName = this.closest('.product-item').querySelector('h3').textContent;
+                alert(`Viewing details for "${productName}" - This would show more product information.`);
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if(window.scrollY > 100) {
+                header.style.backgroundColor = 'rgba(139, 69, 19, 0.98)';
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.3)';
+            } else {
+                header.style.backgroundColor = 'rgba(139, 69, 19, 0.95)';
+                header.style.boxShadow = '0 2px 15px rgba(0, 0, 0, 0.2)';
+            }
+        });
+    </script>
+</body>
+</html>
