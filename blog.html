@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MC Don Blog | Insights on Corporate Events & MC Tips</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #8B4513; /* Rich brown */
+            --secondary: #D4AF37; /* Gold */
+            --accent: #5D4037; /* Dark brown */
+            --light: #F5F5F5;
+            --dark: #212121;
+            --gradient: linear-gradient(135deg, #8B4513 0%, #A0522D 50%, #D2691E 100%);
+            --gradient-light: linear-gradient(135deg, #F5F5F5 0%, #FAF3E0 100%);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--gradient-light);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background: rgba(139, 69, 19, 0.95);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--secondary);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            transition: var(--transition);
+            padding: 8px 15px;
+            border-radius: 4px;
+        }
+        
+        nav ul li a:hover {
+            color: var(--secondary);
+            background: rgba(212, 175, 55, 0.1);
+        }
+        
+        .nav-btn {
+            background: var(--secondary);
+            color: var(--dark) !important;
+            padding: 10px 25px !important;
+            border-radius: 30px;
+            font-weight: 700;
+        }
+        
+        .nav-btn:hover {
+            background: #E6B800;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: white;
+            cursor: pointer;
+        }
+        
+        /* Blog Hero Section */
+        .blog-hero {
+            background: var(--gradient), url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+            color: white;
+            padding: 150px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .blog-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+        
+        .blog-hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+            position: relative;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            font-size: 1rem;
+        }
+        
+        .breadcrumb a {
+            color: var(--secondary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        .breadcrumb span {
+            margin: 0 10px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        /* Blog Content Section */
+        .blog-content {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .blog-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 50px;
+        }
+        
+        /* Blog Posts */
+        .blog-posts {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+        
+        .blog-post {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+            border: 1px solid rgba(139, 69, 19, 0.1);
+        }
+        
+        .blog-post:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .post-image {
+            position: relative;
+            height: 350px;
+            overflow: hidden;
+        }
+        
+        .post-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .blog-post:hover .post-image img {
+            transform: scale(1.05);
+        }
+        
+        .post-category {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--secondary);
+            color: var(--dark);
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            z-index: 2;
+        }
+        
+        .post-content {
+            padding: 30px;
+        }
+        
+        .post-meta {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            color: var(--accent);
+            font-size: 0.9rem;
+        }
+        
+        .post-meta i {
+            margin-right: 8px;
+            color: var(--secondary);
+        }
+        
+        .post-meta span {
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .post-content h2 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+        
+        .post-content p {
+            color: var(--accent);
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+        
+        .read-more {
+            display: inline-block;
+            background: var(--gradient);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .read-more:hover {
+            background: linear-gradient(135deg, #A0522D 0%, #D2691E 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Sidebar */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        
+        .sidebar-widget {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(139, 69, 19, 0.1);
+        }
+        
+        .sidebar-widget h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--secondary);
+            position: relative;
+        }
+        
+        .sidebar-widget h3:after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--primary);
+        }
+        
+        /* About Widget */
+        .about-widget {
+            text-align: center;
+        }
+        
+        .about-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px;
+            border: 4px solid var(--secondary);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .about-widget p {
+            color: var(--accent);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .widget-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .widget-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(139, 69, 19, 0.1);
+            border-radius: 50%;
+            color: var(--primary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .widget-social a:hover {
+            background-color: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        /* Categories Widget */
+        .categories-list {
+            list-style: none;
+        }
+        
+        .categories-list li {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(139, 69, 19, 0.1);
+        }
+        
+        .categories-list li:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .categories-list a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--accent);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .categories-list a:hover {
+            color: var(--primary);
+        }
+        
+        .categories-list span {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--primary);
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        /* Recent Posts Widget */
+        .recent-post {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(139, 69, 19, 0.1);
+        }
+        
+        .recent-post:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .recent-post-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .recent-post-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .recent-post:hover .recent-post-img img {
+            transform: scale(1.1);
+        }
+        
+        .recent-post-content h4 {
+            font-size: 1rem;
+            color: var(--primary);
+            margin-bottom: 5px;
+            line-height: 1.4;
+        }
+        
+        .recent-post-content span {
+            font-size: 0.8rem;
+            color: var(--accent);
+        }
+        
+        /* Newsletter Widget */
+        .newsletter-form {
+            margin-top: 20px;
+        }
+        
+        .newsletter-form p {
+            color: var(--accent);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .newsletter-input {
+            width: 100%;
+            padding: 12px 15px;
+            border-radius: 5px;
+            border: 1px solid rgba(139, 69, 19, 0.2);
+            background-color: white;
+            color: var(--dark);
+            font-size: 1rem;
+            margin-bottom: 15px;
+            transition: var(--transition);
+        }
+        
+        .newsletter-input:focus {
+            outline: none;
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+        }
+        
+        .newsletter-btn {
+            width: 100%;
+            background: var(--gradient);
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .newsletter-btn:hover {
+            background: linear-gradient(135deg, #A0522D 0%, #D2691E 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 60px;
+            gap: 10px;
+        }
+        
+        .page-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: white;
+            color: var(--primary);
+            border: 1px solid rgba(139, 69, 19, 0.2);
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .page-link:hover, .page-link.active {
+            background: var(--gradient);
+            color: white;
+            border-color: var(--secondary);
+        }
+        
+        /* Call to Action */
+        .blog-cta {
+            padding: 80px 0;
+            background: var(--gradient-light);
+            text-align: center;
+        }
+        
+        .blog-cta h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .blog-cta p {
+            font-size: 1.2rem;
+            color: var(--accent);
+            max-width: 700px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--gradient);
+            color: rgba(255, 255, 255, 0.9);
+            padding: 60px 0 30px;
+            margin-top: auto;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .footer-column h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background-color: var(--secondary);
+            color: var(--dark);
+            transform: translateY(-3px);
+        }
+        
+        .creator-credit {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .creator-credit .heart {
+            color: #ff4d4d;
+            animation: heartbeat 1.5s infinite;
+        }
+        
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .blog-hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .blog-layout {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .sidebar {
+                order: -1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                background: rgba(139, 69, 19, 0.98);
+                backdrop-filter: blur(10px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+                transition: var(--transition);
+                z-index: 999;
+                padding: 20px 0;
+            }
+            
+            nav.active {
+                left: 0;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                padding: 0 20px;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+                width: 100%;
+            }
+            
+            nav ul li a {
+                display: block;
+                padding: 12px 20px;
+                text-align: center;
+            }
+            
+            .blog-hero {
+                padding: 120px 0 60px;
+            }
+            
+            .blog-hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .blog-hero p {
+                font-size: 1.1rem;
+            }
+            
+            .post-image {
+                height: 250px;
+            }
+            
+            .post-content h2 {
+                font-size: 1.5rem;
+            }
+            
+            .blog-cta h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .blog-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .post-meta {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            
+            .post-meta span {
+                margin-right: 15px;
+            }
+            
+            .recent-post {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .recent-post-img {
+                width: 100%;
+                height: 150px;
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            
+            .footer-column {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">MC <span>Don</span></a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#services-offer">Services</a></li>
+                    <li><a href="index.html#merchandise">Merchandise</a></li>
+                    <li><a href="index.html#gallery">Gallery</a></li>
+                    <li><a href="index.html#companies">Companies</a></li>
+                    <li><a href="index.html#booked-events">Events</a></li>
+                    <li><a href="index.html#testimonials">Testimonials</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#" class="nav-btn">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Blog Hero Section -->
+    <section class="blog-hero">
+        <div class="container">
+            <h1>MC Don Blog</h1>
+            <p>Insights, tips, and stories from the world of corporate MC hosting, event management, and entertainment.</p>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Blog</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Content Section -->
+    <section class="blog-content">
+        <div class="container">
+            <div class="blog-layout">
+                <!-- Main Blog Posts -->
+                <div class="blog-posts">
+                    <!-- Blog Post 1 -->
+                    <article class="blog-post">
+                        <div class="post-image">
+                            <div class="post-category">Event Tips</div>
+                            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Corporate Event Hosting">
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span><i class="far fa-calendar"></i> October 15, 2023</span>
+                                <span><i class="far fa-clock"></i> 5 min read</span>
+                                <span><i class="far fa-comment"></i> 12 comments</span>
+                            </div>
+                            <h2>Mastering the Art of Corporate Event Hosting: 7 Essential Tips</h2>
+                            <p>Corporate events require a unique approach to hosting. In this comprehensive guide, I share my 15 years of experience in creating engaging, professional, and memorable corporate events. Learn how to balance formality with engagement, handle unexpected situations gracefully, and keep your audience invested from start to finish.</p>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    
+                    <!-- Blog Post 2 -->
+                    <article class="blog-post">
+                        <div class="post-image">
+                            <div class="post-category">Industry Insights</div>
+                            <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Virtual Events">
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span><i class="far fa-calendar"></i> October 5, 2023</span>
+                                <span><i class="far fa-clock"></i> 4 min read</span>
+                                <span><i class="far fa-comment"></i> 8 comments</span>
+                            </div>
+                            <h2>The Future of Hybrid Events: Blending Virtual and Physical Experiences</h2>
+                            <p>With the rise of remote work and global teams, hybrid events have become essential. Discover how to seamlessly integrate virtual and in-person experiences, engage remote audiences effectively, and leverage technology to create inclusive events that resonate with all participants regardless of their location.</p>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    
+                    <!-- Blog Post 3 -->
+                    <article class="blog-post">
+                        <div class="post-image">
+                            <div class="post-category">Personal Growth</div>
+                            <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Public Speaking">
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span><i class="far fa-calendar"></i> September 25, 2023</span>
+                                <span><i class="far fa-clock"></i> 6 min read</span>
+                                <span><i class="far fa-comment"></i> 15 comments</span>
+                            </div>
+                            <h2>Overcoming Stage Fright: A Professional MC's Guide to Confidence</h2>
+                            <p>Even experienced MCs face nerves before stepping on stage. In this personal reflection, I share my journey with stage fright and the practical techniques I've developed over the years to transform anxiety into energy. Learn breathing exercises, mental preparation strategies, and on-stage techniques that work.</p>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    
+                    <!-- Blog Post 4 -->
+                    <article class="blog-post">
+                        <div class="post-image">
+                            <div class="post-category">Branding</div>
+                            <img src="https://images.unsplash.com/photo-1492684223066-e9e4aab4d25e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Brand Collaboration">
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span><i class="far fa-calendar"></i> September 15, 2023</span>
+                                <span><i class="far fa-clock"></i> 7 min read</span>
+                                <span><i class="far fa-comment"></i> 10 comments</span>
+                            </div>
+                            <h2>Building Your Personal Brand as an MC: Lessons from 15 Years in the Industry</h2>
+                            <p>Your personal brand is your most valuable asset as an MC. This guide walks you through developing a distinctive brand identity, creating consistent messaging across platforms, and building a reputation that attracts premium clients. Learn how to showcase your unique value proposition and stand out in a competitive market.</p>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+                
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <!-- About Widget -->
+                    <div class="sidebar-widget about-widget">
+                        <div class="about-image">
+                            <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MC Don">
+                        </div>
+                        <h3>About MC Don</h3>
+                        <p>Professional Corporate MC with over 15 years of experience hosting international conferences, award ceremonies, and corporate events. Passionate about sharing insights and helping others excel in the events industry.</p>
+                        <div class="widget-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Categories Widget -->
+                    <div class="sidebar-widget">
+                        <h3>Categories</h3>
+                        <ul class="categories-list">
+                            <li><a href="#">Event Tips <span>12</span></a></li>
+                            <li><a href="#">Industry Insights <span>8</span></a></li>
+                            <li><a href="#">Personal Growth <span>6</span></a></li>
+                            <li><a href="#">Branding <span>5</span></a></li>
+                            <li><a href="#">Technology <span>4</span></a></li>
+                            <li><a href="#">Success Stories <span>7</span></a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Recent Posts Widget -->
+                    <div class="sidebar-widget">
+                        <h3>Recent Posts</h3>
+                        <div class="recent-post">
+                            <div class="recent-post-img">
+                                <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Recent Post">
+                            </div>
+                            <div class="recent-post-content">
+                                <h4>Mastering Corporate Event Hosting</h4>
+                                <span>Oct 15, 2023</span>
+                            </div>
+                        </div>
+                        <div class="recent-post">
+                            <div class="recent-post-img">
+                                <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Recent Post">
+                            </div>
+                            <div class="recent-post-content">
+                                <h4>Future of Hybrid Events</h4>
+                                <span>Oct 5, 2023</span>
+                            </div>
+                        </div>
+                        <div class="recent-post">
+                            <div class="recent-post-img">
+                                <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Recent Post">
+                            </div>
+                            <div class="recent-post-content">
+                                <h4>Overcoming Stage Fright</h4>
+                                <span>Sep 25, 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Newsletter Widget -->
+                    <div class="sidebar-widget">
+                        <h3>Subscribe to Newsletter</h3>
+                        <div class="newsletter-form">
+                            <p>Get the latest event hosting tips, industry insights, and exclusive content directly in your inbox.</p>
+                            <form id="newsletterForm">
+                                <input type="email" class="newsletter-input" placeholder="Your email address" required>
+                                <button type="submit" class="newsletter-btn">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+            
+            <!-- Pagination -->
+            <div class="pagination">
+                <a href="#" class="page-link active">1</a>
+                <a href="#" class="page-link">2</a>
+                <a href="#" class="page-link">3</a>
+                <a href="#" class="page-link">4</a>
+                <a href="#" class="page-link"><i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Call to Action -->
+    <section class="blog-cta">
+        <div class="container">
+            <h2>Ready to Elevate Your Next Event?</h2>
+            <p>Whether you're planning a corporate conference, product launch, or special celebration, I bring professionalism, energy, and expertise to ensure your event is memorable and successful.</p>
+            <a href="contact.html" class="read-more">Book MC Don Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>MC Don</h3>
+                    <p>Professional Corporate MC & Event Host with expertise in business conferences, award ceremonies, and corporate entertainment.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#services-offer">Services</a></li>
+                        <li><a href="index.html#merchandise">Merchandise</a></li>
+                        <li><a href="index.html#gallery">Gallery</a></li>
+                        <li><a href="index.html#companies">Companies</a></li>
+                        <li><a href="index.html#booked-events">Events</a></li>
+                        <li><a href="index.html#testimonials">Testimonials</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Information</h3>
+                    <ul class="footer-links">
+                        <li><a href="mailto:contact@mcdoncorporate.com">contact@mcdoncorporate.com</a></li>
+                        <li><a href="tel:+254712345678">+254 712 345 678</a></li>
+                        <li><a href="#">Nairobi, Kenya</a></li>
+                        <li><a href="#">Available Worldwide</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="creator-credit">
+                <p>Built with <span class="heart">❤️</span> by Edison Otieno</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = mainNav.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                mainNav.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Newsletter Form Submission
+        const newsletterForm = document.getElementById('newsletterForm');
+        
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = this.querySelector('.newsletter-input').value;
+            
+            if (!email) {
+                alert('Please enter your email address.');
+                return;
+            }
+            
+            // In a real application, you would send this data to a server
+            alert(`Thank you for subscribing to the MC Don newsletter! You'll receive updates at ${email}.`);
+            
+            // Reset the form
+            this.reset();
+        });
+        
+        // Read More Button functionality
+        document.querySelectorAll('.read-more').forEach(button => {
+            button.addEventListener('click', function(e) {
+                if (this.getAttribute('href') === '#') {
+                    e.preventDefault();
+                    const postTitle = this.closest('.blog-post').querySelector('h2').textContent;
+                    alert(`In a real website, this would open the full article: "${postTitle}"`);
+                }
+            });
+        });
+        
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if(window.scrollY > 100) {
+                header.style.backgroundColor = 'rgba(139, 69, 19, 0.98)';
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.3)';
+            } else {
+                header.style.backgroundColor = 'rgba(139, 69, 19, 0.95)';
+                header.style.boxShadow = '0 2px 15px rgba(0, 0, 0, 0.2)';
+            }
+        });
+    </script>
+</body>
+</html>
